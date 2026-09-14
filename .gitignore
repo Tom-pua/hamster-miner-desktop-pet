@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# PowerShell / diagnostics
+*.log
+error.log
+save-wpf.json
+save-wpf.backup.json
+save-wpf.*.tmp
+
+# Local build output
+bin/
+obj/
+dist/
+build/
+*.user
+*.suo
+
+# Release binaries are attached to GitHub Releases, not committed to source
+*.exe
+*.zip
+
+# IDE and OS files
+.vs/
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+.DS_Store
