@@ -1,0 +1,22 @@
+name: Windows self-test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  self-test:
+    runs-on: windows-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Run PowerShell/WPF self-test
+        shell: powershell
+        run: .\自检.ps1
+
+      - name: Run Python rule tests
+        shell: powershell
+        run: python -m unittest discover -s tests -v
