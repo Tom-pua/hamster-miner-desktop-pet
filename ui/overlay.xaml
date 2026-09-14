@@ -1,0 +1,78 @@
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Width="370" Height="300" WindowStyle="None" AllowsTransparency="True"
+        Background="Transparent" Topmost="True" ShowInTaskbar="False" ResizeMode="NoResize">
+  <Window.Resources>
+    <DropShadowEffect x:Key="HudShadow" BlurRadius="18" ShadowDepth="4" Opacity="0.55" Color="#081012"/>
+  </Window.Resources>
+  <Viewbox Stretch="Fill" StretchDirection="Both">
+  <Canvas Width="370" Height="300">
+    <Ellipse Canvas.Left="42" Canvas.Top="247" Width="286" Height="42" Fill="#28000000" IsHitTestVisible="False"/>
+
+    <Border Canvas.Left="220" Canvas.Top="54" Width="134" Height="34" CornerRadius="17"
+            Background="#F2162529" BorderBrush="#8059DCC8" BorderThickness="1" Effect="{StaticResource HudShadow}">
+      <Grid Margin="14,0">
+        <TextBlock x:Name="FloorText" Foreground="#FFE6A6" FontWeight="ExtraBold" FontSize="13" VerticalAlignment="Center"/>
+        <TextBlock x:Name="TargetMini" Foreground="#59DCC8" FontWeight="Bold" FontSize="10" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+      </Grid>
+    </Border>
+
+    <Grid x:Name="TargetVisual" Canvas.Left="215" Canvas.Top="118" Width="138" Height="120" RenderTransformOrigin="0.5,0.56" Cursor="Arrow">
+      <Grid.RenderTransform>
+        <TransformGroup>
+          <ScaleTransform x:Name="TargetScale" ScaleX="1" ScaleY="1"/>
+          <RotateTransform x:Name="TargetRotate" Angle="0"/>
+          <TranslateTransform x:Name="TargetTranslate" X="0" Y="0"/>
+        </TransformGroup>
+      </Grid.RenderTransform>
+      <Image x:Name="TargetImage" Width="138" Height="120" Stretch="Uniform"/>
+    </Grid>
+
+    <Image x:Name="Hamster" Canvas.Left="15" Canvas.Top="73" Width="205" Height="205" Stretch="Uniform" Cursor="Hand"
+           RenderTransformOrigin="0.63,0.72" Effect="{StaticResource HudShadow}">
+      <Image.RenderTransform>
+        <TransformGroup>
+          <RotateTransform x:Name="HamsterRotate" Angle="0"/>
+          <ScaleTransform x:Name="HamsterScale" ScaleX="1" ScaleY="1"/>
+          <TranslateTransform x:Name="HamsterTranslate" X="0" Y="0"/>
+        </TransformGroup>
+      </Image.RenderTransform>
+    </Image>
+
+    <Canvas x:Name="ImpactLayer" Canvas.Left="205" Canvas.Top="103" Width="164" Height="145" IsHitTestVisible="False" Visibility="Collapsed" Panel.ZIndex="12">
+      <Ellipse x:Name="ImpactFlash" Canvas.Left="63" Canvas.Top="55" Width="38" Height="38" Stroke="#FFFFC85B" StrokeThickness="5" Fill="#44FFFFFF"/>
+      <Ellipse x:Name="Impact1" Canvas.Left="76" Canvas.Top="68" Width="10" Height="7" Fill="#FFE6A6"/>
+      <Ellipse x:Name="Impact2" Canvas.Left="76" Canvas.Top="68" Width="7" Height="10" Fill="#FFE6A6"/>
+      <Ellipse x:Name="Impact3" Canvas.Left="76" Canvas.Top="68" Width="9" Height="6" Fill="#FFE6A6"/>
+      <Ellipse x:Name="Impact4" Canvas.Left="76" Canvas.Top="68" Width="6" Height="9" Fill="#FFE6A6"/>
+      <Ellipse x:Name="Impact5" Canvas.Left="76" Canvas.Top="68" Width="11" Height="7" Fill="#FFE6A6"/>
+      <Ellipse x:Name="Impact6" Canvas.Left="76" Canvas.Top="68" Width="7" Height="11" Fill="#FFE6A6"/>
+    </Canvas>
+
+    <Canvas x:Name="DamageFloatLayer" Canvas.Left="205" Canvas.Top="75" Width="164" Height="170" IsHitTestVisible="False" Panel.ZIndex="20"/>
+
+    <Border Canvas.Left="215" Canvas.Top="239" Width="136" Height="20" Background="#F20E191C" CornerRadius="10"
+            BorderBrush="#603A555A" BorderThickness="1" Effect="{StaticResource HudShadow}">
+      <Grid Margin="4">
+        <ProgressBar x:Name="HpBar" Minimum="0" Maximum="100" Height="12" Foreground="#59DCC8" Background="#263A3E" BorderThickness="0"/>
+        <TextBlock x:Name="HpText" Foreground="White" FontSize="8" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+      </Grid>
+    </Border>
+
+    <Border x:Name="RunReportButton" Canvas.Left="18" Canvas.Top="242" Width="194" Height="50" Background="#F2162529" CornerRadius="14"
+            BorderBrush="#8059DCC8" BorderThickness="1" Effect="{StaticResource HudShadow}" Cursor="Hand" ToolTip="打开冒险手册 · 矿井战报">
+      <Grid Margin="13,5,10,5">
+        <TextBlock x:Name="WarehouseText" Foreground="#FFE6A6" FontSize="10" FontWeight="Bold" LineHeight="18" VerticalAlignment="Center"/>
+        <TextBlock Text="›" Foreground="#59DCC8" FontSize="20" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+      </Grid>
+    </Border>
+
+    <Border x:Name="ToastBorder" Canvas.Left="20" Canvas.Top="207" Width="330" Height="32" CornerRadius="15"
+            Background="#F2162529" BorderBrush="#59DCC8" BorderThickness="1.5" Visibility="Collapsed" Effect="{StaticResource HudShadow}">
+      <TextBlock x:Name="Toast" Foreground="#59DCC8" FontSize="11" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Center" Margin="12,0"/>
+    </Border>
+    <TextBlock x:Name="FloatText" Visibility="Collapsed"/>
+
+  </Canvas>
+  </Viewbox>
+</Window>

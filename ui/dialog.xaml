@@ -1,0 +1,32 @@
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Width="470" SizeToContent="Height" MaxHeight="620" WindowStyle="None" AllowsTransparency="True"
+        Background="Transparent" ResizeMode="NoResize" ShowInTaskbar="False" WindowStartupLocation="CenterOwner">
+  <Border CornerRadius="18" BorderBrush="#8061E1CD" BorderThickness="1.5" Padding="1">
+    <Border.Effect><DropShadowEffect BlurRadius="28" ShadowDepth="8" Opacity="0.7" Color="#05090A"/></Border.Effect>
+    <Border.Background>
+      <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+        <GradientStop Color="#FF1B2B2F" Offset="0"/>
+        <GradientStop Color="#FF10191C" Offset="1"/>
+      </LinearGradientBrush>
+    </Border.Background>
+    <Grid Margin="26">
+      <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+      <Grid>
+        <Grid.ColumnDefinitions><ColumnDefinition Width="54"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+        <Border Width="42" Height="42" CornerRadius="21" Background="#244FE0C5" BorderBrush="#7059DCC8" BorderThickness="1">
+          <TextBlock x:Name="DialogIcon" Text="◆" Foreground="#FFE6A6" FontSize="19" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Border>
+        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+          <TextBlock x:Name="DialogTitle" Foreground="#F6F3E9" FontFamily="Microsoft YaHei UI" FontSize="21" FontWeight="ExtraBold"/>
+          <TextBlock Text="PROJECT DEEP DESK · 矿井通讯" Foreground="#6E8889" FontSize="9" FontWeight="Bold" Margin="0,3,0,0"/>
+        </StackPanel>
+      </Grid>
+      <TextBlock x:Name="DialogMessage" Grid.Row="1" Foreground="#B8C7C5" FontFamily="Microsoft YaHei UI" FontSize="14" LineHeight="24" TextWrapping="Wrap" Margin="0,22,0,22"/>
+      <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+        <Button x:Name="DialogCancelButton" Content="取消" MinWidth="92" Padding="18,10" Margin="6" Background="#26393D" Foreground="#C7D3D1" BorderBrush="#496064" BorderThickness="1"/>
+        <Button x:Name="DialogConfirmButton" Content="确认" MinWidth="104" Padding="18,10" Margin="6" Background="#59DCC8" Foreground="#102022" BorderThickness="0" FontWeight="Bold"/>
+      </StackPanel>
+    </Grid>
+  </Border>
+</Window>
