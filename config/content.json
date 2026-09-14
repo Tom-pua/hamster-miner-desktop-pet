@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "starterSetName": "新手矿工",
+  "rarities": [
+    {"key":"white","label":"普通","color":"#DCE5E4","oreName":"铁矿","oreValue":1,"oreHp":1.0,"chestName":"木箱","chestHp":0.8,"equipmentCoefficient":1.0,"oreWeight":0.665,"chestWeight":0.64,"eggWeight":0.45,"oreAsset":"mineral_iron.png","chestAsset":"chest_wood.png"},
+    {"key":"blue","label":"稀有","color":"#56A8FF","oreName":"蓝晶","oreValue":4,"oreHp":2.0,"chestName":"铁箱","chestHp":1.5,"equipmentCoefficient":1.35,"oreWeight":0.20,"chestWeight":0.20,"eggWeight":0.27,"oreAsset":"mineral_blue.png","chestAsset":"chest_iron.png"},
+    {"key":"purple","label":"史诗","color":"#B77AFF","oreName":"星银","oreValue":15,"oreHp":4.0,"chestName":"水晶箱","chestHp":4.0,"equipmentCoefficient":1.9,"oreWeight":0.10,"chestWeight":0.10,"eggWeight":0.20,"oreAsset":"mineral_purple.png","chestAsset":"chest_crystal.png"},
+    {"key":"gold","label":"传说","color":"#FF9F43","oreName":"太阳金","oreValue":80,"oreHp":8.0,"chestName":"黄金箱","chestHp":10.0,"equipmentCoefficient":2.8,"oreWeight":0.025,"chestWeight":0.04,"eggWeight":0.06,"oreAsset":"mineral_gold.png","chestAsset":"chest_gold.png"},
+    {"key":"red","label":"神话","color":"#FF5E6A","oreName":"虚空钻","oreValue":500,"oreHp":20.0,"chestName":"星核箱","chestHp":25.0,"equipmentCoefficient":4.2,"oreWeight":0.01,"chestWeight":0.02,"eggWeight":0.02,"oreAsset":"mineral_void.png","chestAsset":"chest_starcore.png"}
+  ],
+  "slots": [
+    {"key":"head","label":"头部","starterName":"软布帽","dropName":"矿帽","starterValue":0.005},
+    {"key":"pickaxe","label":"镐子","starterName":"木柄镐","dropName":"掘进镐","starterValue":0.8},
+    {"key":"clothing","label":"衣服","starterName":"帆布工装","dropName":"矿工披风","starterValue":0.0075},
+    {"key":"shoes","label":"鞋子","starterName":"防滑布靴","dropName":"踏岩靴","starterValue":0.0036}
+  ],
+  "pets": [
+    {"name":"石团鼠","rarity":"white","kind":"damage","base":0.05,"label":"所有挖矿伤害"},
+    {"name":"背包龟","rarity":"white","kind":"yield","base":0.04,"label":"矿物数量"},
+    {"name":"灯泡虫","rarity":"white","kind":"funds","base":0.04,"label":"返回资金"},
+    {"name":"打字雀","rarity":"blue","kind":"keyboard","base":0.08,"label":"键盘伤害"},
+    {"name":"齿轮鼹","rarity":"blue","kind":"auto","base":0.10,"label":"挂机伤害"},
+    {"name":"寻宝犬","rarity":"blue","kind":"chest","base":0.10,"label":"宝箱出现率"},
+    {"name":"墨水章鱼","rarity":"purple","kind":"ink","base":1.0,"trigger":50,"label":"每50次键盘命中追加伤害"},
+    {"name":"月眠兔","rarity":"purple","kind":"auto_speed","base":0.08,"label":"挂机攻击间隔加速"},
+    {"name":"准星隼","rarity":"purple","kind":"weakness","base":0.12,"label":"弱点引爆伤害"},
+    {"name":"黄金史莱姆","rarity":"gold","kind":"funds","base":0.05,"label":"返回资金"},
+    {"name":"水晶龙仔","rarity":"gold","kind":"rare_yield","base":0.15,"label":"蓝色以上矿量"},
+    {"name":"时钟猫","rarity":"gold","kind":"rewind_damage","base":0.18,"label":"回挖层全伤害"},
+    {"name":"万键凤凰","rarity":"red","kind":"phoenix","base":10.0,"trigger":100,"label":"每100次键盘命中追加伤害"},
+    {"name":"永动鲸","rarity":"red","kind":"whale","base":20.0,"trigger":60,"label":"每60秒挂机追加伤害"},
+    {"name":"命运九尾","rarity":"red","kind":"gear_luck","base":0.03,"label":"装备升品概率"},
+    {"name":"磁石刺猬","rarity":"blue","kind":"gear_power","base":0.08,"label":"宝箱装备属性"},
+    {"name":"熔岩蝾螈","rarity":"purple","kind":"chest_damage","base":0.25,"label":"对宝箱伤害"},
+    {"name":"星轨浣熊","rarity":"gold","kind":"yield","base":0.10,"label":"矿物数量"}
+  ],
+  "skills": [
+    {"id":"trained_tap","tree":"keyboard","tier":1,"max":10,"name":"熟练敲击","description":"键盘伤害每级 +12%","value":0.12},
+    {"id":"hot_hands","tree":"keyboard","tier":2,"max":10,"name":"热手","description":"每层连击每级额外 +0.15% 伤害","value":0.0015},
+    {"id":"space_hammer","tree":"keyboard","tier":3,"max":5,"name":"空格重锤","description":"每 25 次键盘命中追加每级 50% 基础伤害","value":0.50,"trigger":25},
+    {"id":"fast_typing","tree":"keyboard","tier":4,"max":5,"name":"高速录入","description":"连击达到 50 时，每级伤害 +5%","value":0.05,"trigger":50},
+    {"id":"keyboard_symphony","tree":"keyboard","tier":5,"max":3,"name":"键盘交响","description":"满连击时，每级伤害 +50%","value":0.50,"trigger":100},
+    {"id":"auto_pick","tree":"idle","tier":1,"max":10,"name":"自动镐","description":"自动攻击间隔每级缩短 4%","value":0.04},
+    {"id":"silent_charge","tree":"idle","tier":2,"max":10,"name":"静默蓄能","description":"每静默 10 秒，自动伤害每级 +3%","value":0.03,"trigger":10},
+    {"id":"steady_drill","tree":"idle","tier":3,"max":8,"name":"稳定钻头","description":"自动攻击伤害每级 +15%","value":0.15},
+    {"id":"return_blast","tree":"idle","tier":4,"max":5,"name":"复工爆破","description":"静默后首次手动命中追加每级 40% 基础伤害","value":0.40},
+    {"id":"perpetual_core","tree":"idle","tier":5,"max":3,"name":"永动机芯","description":"自动攻击伤害每级 +35%","value":0.35},
+    {"id":"precision","tree":"mouse","tier":1,"max":10,"name":"精准镐击","description":"鼠标伤害每级 +12%","value":0.12},
+    {"id":"crack_tracking","tree":"mouse","tier":2,"max":10,"name":"裂纹追踪","description":"弱点引爆每层每级追加 2% 基础伤害","value":0.02},
+    {"id":"quick_mark","tree":"mouse","tier":3,"max":8,"name":"快速标记","description":"每 2 级令弱点引爆提前 1 次，最低 6 次","value":2,"trigger":10,"minimum":6},
+    {"id":"treasure_instinct","tree":"mouse","tier":4,"max":6,"name":"寻宝直觉","description":"宝箱出现率每级增加 1 个百分点","value":0.01},
+    {"id":"heart_blast","tree":"mouse","tier":5,"max":3,"name":"红心爆破","description":"弱点引爆总伤害每级 +25%","value":0.25}
+  ],
+  "equipmentSets": {
+    "white":["岩层学徒","粉尘行者"],
+    "blue":["蓝晶技师","潮汐钻探队"],
+    "purple":["星银咏唱者","秘银时术师","森灵工程团"],
+    "gold":["黄金勘探家","日冕收藏家"],
+    "red":["虚空键圣","深渊破界者"]
+  },
+  "setEffects": [
+    {"name":"星银咏唱者","kind":"damage","value":0.12,"text":"所有挖矿伤害 +12%"},
+    {"name":"黄金勘探家","kind":"funds","value":0.20,"text":"返回地面资金 +20%"},
+    {"name":"虚空键圣","kind":"keyboard","value":0.35,"text":"键盘命中伤害 +35%"},
+    {"name":"粉尘行者","kind":"yield","value":0.10,"text":"矿物数量 +10%"},
+    {"name":"潮汐钻探队","kind":"auto","value":0.18,"text":"自动攻击伤害 +18%"},
+    {"name":"秘银时术师","kind":"mouse","value":0.25,"text":"鼠标命中伤害 +25%"},
+    {"name":"森灵工程团","kind":"pet","value":0.15,"text":"宠物效果 +15%"},
+    {"name":"日冕收藏家","kind":"chest","value":0.05,"text":"宝箱出现率 +5 个百分点"},
+    {"name":"深渊破界者","kind":"damage","value":0.40,"text":"所有挖矿伤害 +40%"}
+  ]
+}
